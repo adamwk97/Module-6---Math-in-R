@@ -1,0 +1,34 @@
+---
+title: "Math in R Part 2"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Working with math in R and matrices.
+
+```{r, comment = NA}
+A=matrix(c(2,0,1,3), ncol=2)
+B=matrix(c(5,2,4,-1), ncol=2)
+sumAB = A+B
+sumAB
+diffAB = A-B
+diffAB
+```
+
+A+B creates a 2x2 matrix with values `r A+B`, and A-B creates a 2x2 matrix with values `r A-B`
+
+```{r, comment = NA}
+diag = diag(c(4,1,2,3), 4, 4)
+diag
+
+m = diag(3, 5, 5)
+m[1,] = 1
+m[,1] = 2
+m[1,1] = 3
+m
+```
+
+Using the 'diag' function, we can first create a matrix with the diagonal values set to 3, and then append the other values accordingly.

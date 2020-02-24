@@ -1,0 +1,34 @@
+<h1 id="math-in-r-part-2">Math in R Part 2</h1>
+<p>Working with math in R and matrices.</p>
+<pre class="sourceCode r"><code class="sourceCode r">A=<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">3</span>), <span class="dt">ncol=</span><span class="dv">2</span>)
+B=<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">4</span>,-<span class="dv">1</span>), <span class="dt">ncol=</span><span class="dv">2</span>)
+sumAB =<span class="st"> </span>A+B
+sumAB</code></pre>
+<pre><code>     [,1] [,2]
+[1,]    7    5
+[2,]    2    2</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">diffAB =<span class="st"> </span>A-B
+diffAB</code></pre>
+<pre><code>     [,1] [,2]
+[1,]   -3   -3
+[2,]   -2    4</code></pre>
+<p>A+B creates a 2x2 matrix with values 7, 2, 5, 2, and A-B creates a 2x2 matrix with values -3, -2, -3, 4</p>
+<pre class="sourceCode r"><code class="sourceCode r">diag =<span class="st"> </span><span class="kw">diag</span>(<span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">4</span>, <span class="dv">4</span>)
+diag</code></pre>
+<pre><code>     [,1] [,2] [,3] [,4]
+[1,]    4    0    0    0
+[2,]    0    1    0    0
+[3,]    0    0    2    0
+[4,]    0    0    0    3</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">m =<span class="st"> </span><span class="kw">diag</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">5</span>)
+m[<span class="dv">1</span>,] =<span class="st"> </span><span class="dv">1</span>
+m[,<span class="dv">1</span>] =<span class="st"> </span><span class="dv">2</span>
+m[<span class="dv">1</span>,<span class="dv">1</span>] =<span class="st"> </span><span class="dv">3</span>
+m</code></pre>
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]    3    1    1    1    1
+[2,]    2    3    0    0    0
+[3,]    2    0    3    0    0
+[4,]    2    0    0    3    0
+[5,]    2    0    0    0    3</code></pre>
+<p>Using the 'diag' function, we can first create a matrix with the diagonal values set to 3, and then append the other values accordingly.</p>
